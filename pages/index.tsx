@@ -3,8 +3,9 @@ import styles from '../styles/Home.module.css'
 import React from "react"
 import Link from "next/link"
 import img from 'assets/image/download.jpg';
+import {NextPage} from 'next';
 
-export default function Home() {
+const Home:NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,4 +22,5 @@ export default function Home() {
       <img src={img} alt=""/>
     </div>
   )
-}
+};
+export default Home;

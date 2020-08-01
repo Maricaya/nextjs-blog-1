@@ -3,9 +3,6 @@ import Head from "next/head"
 import React from "react"
 
 export default function App({Component, pageProps}) {
-  // Component
-  console.log('Component', Component)
-  console.log('pageProps', pageProps)
   return <div>
     <Head>
       <title>第一篇文章</title>

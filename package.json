@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "gray-matter": "^4.0.2",
     "next": "9.5.0",
     "next-images": "^1.4.0",
     "react": "16.13.1",
