@@ -12,8 +12,11 @@
     "gray-matter": "^4.0.2",
     "next": "9.5.0",
     "next-images": "^1.4.0",
+    "pg": "^8.3.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
