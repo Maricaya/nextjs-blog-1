@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CreatePost1596542806356 = void 0;
+exports.CreateComments1591207679470 = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -17,12 +17,12 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _typeorm = require("typeorm");
 
-var CreatePost1596542806356 = /*#__PURE__*/function () {
-  function CreatePost1596542806356() {
-    (0, _classCallCheck2["default"])(this, CreatePost1596542806356);
+var CreateComments1591207679470 = /*#__PURE__*/function () {
+  function CreateComments1591207679470() {
+    (0, _classCallCheck2["default"])(this, CreateComments1591207679470);
   }
 
-  (0, _createClass2["default"])(CreatePost1596542806356, [{
+  (0, _createClass2["default"])(CreateComments1591207679470, [{
     key: "up",
     value: function () {
       var _up = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(queryRunner) {
@@ -32,7 +32,7 @@ var CreatePost1596542806356 = /*#__PURE__*/function () {
               case 0:
                 _context.next = 2;
                 return queryRunner.createTable(new _typeorm.Table({
-                  name: 'posts',
+                  name: 'comments',
                   columns: [{
                     name: 'id',
                     isGenerated: true,
@@ -40,14 +40,14 @@ var CreatePost1596542806356 = /*#__PURE__*/function () {
                     generationStrategy: 'increment',
                     isPrimary: true
                   }, {
-                    name: 'title',
-                    type: 'varchar'
+                    name: 'user_id',
+                    type: 'int'
+                  }, {
+                    name: 'post_id',
+                    type: 'int'
                   }, {
                     name: 'content',
                     type: 'text'
-                  }, {
-                    name: 'author_id',
-                    type: 'int'
                   }]
                 }));
 
@@ -77,7 +77,7 @@ var CreatePost1596542806356 = /*#__PURE__*/function () {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return queryRunner.dropTable('posts');
+                return queryRunner.dropTable('comments');
 
               case 2:
                 return _context2.abrupt("return", _context2.sent);
@@ -97,7 +97,7 @@ var CreatePost1596542806356 = /*#__PURE__*/function () {
       return down;
     }()
   }]);
-  return CreatePost1596542806356;
+  return CreateComments1591207679470;
 }();
 
-exports.CreatePost1596542806356 = CreatePost1596542806356;
+exports.CreateComments1591207679470 = CreateComments1591207679470;
