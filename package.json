@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"babel ./src --out-dir dist --extensions .ts,.tsx\"",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typeorm:build": "babel ./src --out-dir dist --extensions .ts,.tsx",
+    "m:create": "typeorm migration:create",
+    "m:run": "typeorm migration:run",
+    "m:revert": "typeorm migration:revert",
+    "e:create": "typeorm entity:create"
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
@@ -24,6 +29,7 @@
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "concurrently": "^5.3.0",
     "typescript": "^3.9.7"
   }
 }
